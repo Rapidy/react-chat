@@ -1,9 +1,10 @@
-import './app.sass';
+import JoinBlock from './components/JoinBlock';
+import socket from './socket';
 
 function App() {
   return (
-    <div>
-      
+    <div className='wrapper'>
+      <JoinBlock />
     </div>
   );
 }
