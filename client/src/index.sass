@@ -4,9 +4,12 @@
   color: black
 
 .wrapper
-  max-width: 40%
+  max-width: 50%
   margin: 100px auto
   min-width: 720px
+  background: #fff
+  border-radius: 8px
+  box-shadow: 1px 1px 25px 1px #0000000e
 
 .join-block
   margin: 0 auto
@@ -27,13 +30,13 @@
 
 .chat
   display: flex
-  height: 500px
+  height: 800px
   border: 1px solid rgba(159, 183, 197, 0.2)
   border-radius: 8px
   overflow: hidden
   &-users
     border-right: 1px solid rgba(159, 183, 197, 0.1)
-    padding: 20px
+    padding: 20px 15px
     width: 200px
     background-color: #f6f9fa
   &-messages
@@ -47,6 +50,7 @@
   flex: 1
   height: calc(100% - 155px)
   overflow: auto
+  padding-right: 6px
 
 .message
   margin-bottom: 20px
@@ -55,12 +59,17 @@
     border-radius: 10px
     border-top: 1px solid rgba(0, 0, 0, 0.1)
     background-color: #7160ff
-    padding: 10px 15px 15px
+    padding: 8px 15px 11px
     color: #fff
     margin-bottom: 2px
   span
     opacity: 0.5
     font-size: 14px
+    display: block
+  &.myMessage
+    text-align: right
+    p
+      background-color: #3b2db4
 
 .chat-users ul
   list-style: none
@@ -81,3 +90,16 @@
   textarea
     width: 100%
     margin-bottom: 10px
+    resize: none
+
+::-webkit-scrollbar
+  width: 4px
+  -webkit-appearance: none
+
+::-webkit-scrollbar-track
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  border-radius: 50px
+
+::-webkit-scrollbar-thumb
+  background: #dbdbdb
+  border-radius: 50px
